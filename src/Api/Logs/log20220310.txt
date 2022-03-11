@@ -1,0 +1,78 @@
+2022-03-10 14:54:56.626 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down.
+2022-03-10 14:54:56.706 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Hosting environment: Development
+2022-03-10 14:54:56.710 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Content root path: C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Api
+2022-03-10 14:55:22.344 | 3 | INFO | CliDemo | Andreani.ARQ.Core.Behaviours.LoggingBehaviour | Handling Request: ListPerson with params: {}
+2022-03-10 14:55:44.287 | 3 | EROR | CliDemo | CliDemo.Application.UseCase.V1.PersonOperation.Queries.GetList.ListPerson | Request: Unhandled Exception for Request ListPerson {"$type":"ListPerson"}
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): No se ha encontrado la ruta de acceso de la red.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Andreani.Data.CQRS.Queries.ReadOnlyQuery.GetAllAsync[T](String table)
+   at CliDemo.Application.UseCase.V1.PersonOperation.Queries.GetList.ListPersonHandler.Handle(ListPerson request, CancellationToken cancellationToken) in C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Application\UseCase\V1\PersonOperation\Queries\GetList\ListPerson.cs:line 28
+   at Andreani.ARQ.Core.Behaviours.PerformanceBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Andreani.ARQ.Core.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Andreani.ARQ.Core.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Andreani.ARQ.Core.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2022-03-10 14:55:44.430 | 3 | EROR | CliDemo | Serilog.AspNetCore.RequestLoggingMiddleware | HTTP GET /api/v1/Person responded 500 in 22167.4556 ms
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): No se ha encontrado la ruta de acceso de la red.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Andreani.Data.CQRS.Queries.ReadOnlyQuery.GetAllAsync[T](String table)
+   at CliDemo.Application.UseCase.V1.PersonOperation.Queries.GetList.ListPersonHandler.Handle(ListPerson request, CancellationToken cancellationToken) in C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Application\UseCase\V1\PersonOperation\Queries\GetList\ListPerson.cs:line 28
+   at Andreani.ARQ.Core.Behaviours.PerformanceBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Andreani.ARQ.Core.Behaviours.ValidationBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Andreani.ARQ.Core.Behaviours.LoggingBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Andreani.ARQ.Core.Behaviours.UnhandledExceptionBehaviour`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at WebApi.Controllers.V1.PersonController.Get() in C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Api\Controllers\V1\PersonController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2022-03-10 14:55:44.449 | 3 | EROR | CliDemo | Andreani.ARQ.WebHost.Middleware.FluentValidationMiddleware | InternalServerError - Notify - Code: 500 internal server, Property: System.Data.SqlClient.SqlException, Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2022-03-10 14:56:21.636 | 29 | INFO | CliDemo | Andreani.ARQ.Core.Behaviours.LoggingBehaviour | Handling Request: ListPerson with params: {}
+2022-03-10 14:56:22.478 | 29 | INFO | CliDemo | Andreani.ARQ.Core.Behaviours.LoggingBehaviour | Response Request: ListPerson with Content: {"Content":[{"PersonId":1,"Nombre":"string","Apellido":"string"},{"PersonId":2,"Nombre":"Lucas","Apellido":"Olivera"},{"PersonId":3,"Nombre":"Cesar","Apellido":"Zanello"},{"PersonId":4,"Nombre":"Lucas","Apellido":"Olivera"},{"PersonId":5,"Nombre":"Marian","Apellido":"Ughetti"},{"PersonId":6,"Nombre":"SARAZA","Apellido":"COSMICA"},{"PersonId":7,"Nombre":"Lucas","Apellido":"Olivera"},{"PersonId":8,"Nombre":"Lucas","Apellido":"Olivera"},{"PersonId":9,"Nombre":"Victor","Apellido":"Medina"},{"PersonId":10,"Nombre":"Gabriel","Apellido":"Molinas"},{"PersonId":11,"Nombre":"Gabriel","Apellido":"Molinas"},{"PersonId":12,"Nombre":"Lucas","Apellido":"Olivera Nuevo"},{"PersonId":13,"Nombre":"Lucas nuevo","Apellido":"Olivera Nuevo"}],"StatusCode":200,"Notifications":[],"IsValid":true,"Headers":{}}
+2022-03-10 14:56:22.493 | 29 | INFO | CliDemo | Serilog.AspNetCore.RequestLoggingMiddleware | HTTP GET /api/v1/Person responded 200 in 884.7436 ms
+2022-03-10 14:57:30.405 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down.
+2022-03-10 14:57:30.458 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Hosting environment: Development
+2022-03-10 14:57:30.459 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Content root path: C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Api

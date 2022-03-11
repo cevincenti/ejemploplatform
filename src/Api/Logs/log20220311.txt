@@ -1,0 +1,30 @@
+2022-03-11 10:31:00.447 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down.
+2022-03-11 10:31:00.510 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Hosting environment: Development
+2022-03-11 10:31:00.512 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Content root path: C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Api
+2022-03-11 11:03:02.071 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down.
+2022-03-11 11:03:02.129 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Hosting environment: Development
+2022-03-11 11:03:02.130 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Content root path: C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Api
+2022-03-11 11:03:02.779 | 11 | EROR | CliDemo | Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer | Connection ID "17582052964044898629", Request ID "80000146-0004-f400-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/v1/Person" for actions - WebApi.Controllers.V1.PersonController.Get (CliDemo),WebApi.Controllers.V1.PersonController.Hola (CliDemo). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2022-03-11 14:07:10.376 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down.
+2022-03-11 14:07:10.423 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Hosting environment: Development
+2022-03-11 14:07:10.426 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Content root path: C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Api
+2022-03-11 14:10:46.905 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down.
+2022-03-11 14:10:46.942 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Hosting environment: Development
+2022-03-11 14:10:46.942 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Content root path: C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Api
+2022-03-11 14:11:01.470 | 9 | INFO | CliDemo | Serilog.AspNetCore.RequestLoggingMiddleware | HTTP GET /api/EstadoDelPedido/3 responded 200 in 86.9380 ms
+2022-03-11 14:11:02.754 | 9 | INFO | CliDemo | Serilog.AspNetCore.RequestLoggingMiddleware | HTTP GET /api/EstadoDelPedido/3 responded 200 in 17.6276 ms
+2022-03-11 14:11:06.680 | 9 | INFO | CliDemo | Serilog.AspNetCore.RequestLoggingMiddleware | HTTP GET /api/EstadoDelPedido/3 responded 200 in 2.5611 ms
+2022-03-11 14:11:45.892 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down.
+2022-03-11 14:11:45.936 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Hosting environment: Development
+2022-03-11 14:11:45.938 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Content root path: C:\Users\cvincenti\OneDrive - ANDREANI LOGISTICA SA\Escritorio\Mis Documentos\Proyectos Programación\Platform\src\Api
+2022-03-11 14:11:55.490 | 11 | INFO | CliDemo | Serilog.AspNetCore.RequestLoggingMiddleware | HTTP GET /api/EstadoDelPedido/54 responded 200 in 68.6795 ms
+2022-03-11 14:11:57.562 | 6 | INFO | CliDemo | Serilog.AspNetCore.RequestLoggingMiddleware | HTTP GET /api/EstadoDelPedido/54 responded 200 in 9.8933 ms
+2022-03-11 20:12:51.761 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down.
+2022-03-11 20:12:51.798 | 1 | INFO | CliDemo | Microsoft.Hosting.Lifetime | Hosting environment: Development
